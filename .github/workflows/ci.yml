@@ -5,8 +5,6 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -19,6 +17,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -41,7 +44,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.SEILER_CLASSIC_PAT }}
 
       - name: Install dependencies
-        run: bun install
+        run: npm install
 
       - name: Run PHP syntax check
         run: find src -name "*.php" -not -path "*/vendor/*" -exec php -l {} \;
@@ -63,6 +66,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -74,7 +82,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.SEILER_CLASSIC_PAT }}
 
       - name: Install dependencies
-        run: bun install
+        run: npm install
 
       - name: Run tests
         run: bun test
