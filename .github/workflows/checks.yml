@@ -142,7 +142,7 @@ jobs:
         run: bun install
 
       - name: Start wp-env
-        run: bunx @wordpress/env start
+        run: bunx --package @wordpress/env wp-env start
 
       - name: Run PHPUnit (wp-env)
         run: bunx seiler-phpunit-wp --testdox
@@ -150,7 +150,7 @@ jobs:
 
       - name: Stop wp-env
         if: always()
-        run: bunx @wordpress/env stop
+        run: bunx --package @wordpress/env wp-env stop
 
   integration-ddev:
     runs-on: ubuntu-latest
