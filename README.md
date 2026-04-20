@@ -1,44 +1,21 @@
 # Seiler 2026 WordPress Theme
 
-A modern WordPress block theme designed for public safety organizations. Features full site editing (FSE), custom block patterns, and integration with Splide Carousel for dynamic content displays.
+* **Author:** Seiler Instruments
+* **Developer:** Brennan Goewert
+* **Designer:** Garry Dennison
+* **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
-## 🚀 Features
-
-- **Full Site Editing (FSE)** - Complete control over your site design using the WordPress block editor
-- **Custom Block Patterns** - 7 pre-designed patterns ready to use on your pages
-- **Responsive Design** - Mobile-first approach that looks great on all devices
-- **Modern Design System** - Professional color palette and typography optimized for public safety organizations
-- **WooCommerce Compatible** - Optional e-commerce functionality
-- **Accessibility Ready** - WCAG 2.1 Level AA compliant
-- **Performance Optimized** - Lightweight and fast-loading
+A modern WordPress block theme designed for Seiler divisions. Features common design language, full site editing (FSE), custom block patterns, and integration with Splide Carousel for dynamic content displays.
 
 ## 📋 Requirements
 
-- **WordPress:** 6.1 or higher
-- **PHP:** 7.4 or higher
-- **Recommended Plugins:**
-  - Splide Carousel (for sliders and carousels)
-  - Contact Form 7, WPForms, or Gravity Forms (for contact forms)
-  - WooCommerce (optional, for e-commerce features)
-
-## 💿 Installation
-
-### Method 1: Manual Installation
-
-1. Download the theme files
-2. Upload the entire `wp-theme-seiler-2026` folder to `/wp-content/themes/` directory
-3. Log in to your WordPress admin panel
-4. Navigate to **Appearance → Themes**
-5. Find "Seiler 2026" and click **Activate**
-
-### Method 2: ZIP Upload
-
-1. Compress the theme folder into a ZIP file
-2. Log in to your WordPress admin panel
-3. Navigate to **Appearance → Themes → Add New**
-4. Click **Upload Theme**
-5. Choose your ZIP file and click **Install Now**
-6. Click **Activate** after installation completes
+* ***WordPress:** 6.1 or higher
+* ***PHP:** 7.4 or higher
+* ***Recommended Plugins:**
+  * *Splide Carousel (for sliders and carousels)
+  * *Gravity Forms (for contact forms)
+  * *WooCommerce (optional, for e-commerce features)
+  * *The Events Calendar (optional, for event management)
 
 ## 🎨 Getting Started
 
@@ -271,78 +248,7 @@ wp-theme-seiler-2026/
 2. Modify `theme.json` for design tokens (colors, typography, spacing)
 3. Changes will apply globally across the site
 
-## ♿ Accessibility
-
-The theme follows WordPress accessibility standards:
-
-- Semantic HTML5 markup
-- ARIA labels where appropriate
-- Keyboard navigation support
-- Focus indicators on interactive elements
-- Color contrast ratios meet WCAG 2.1 Level AA
-- Screen reader friendly
-- Reduced motion support for users with motion sensitivity
-
-## 🧪 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📝 Changelog
-
-### Version 1.0.0
-- Initial release
-- Full site editing support
-- 7 custom block patterns
-- Responsive design
-- WooCommerce compatibility
-- Accessibility ready
-
-## 🆘 Support & Documentation
-
-### Need Help?
-
-- **WordPress Codex:** [https://codex.wordpress.org/](https://codex.wordpress.org/)
-- **Block Editor Handbook:** [https://developer.wordpress.org/block-editor/](https://developer.wordpress.org/block-editor/)
-- **Theme Check Plugin:** Test your theme against WordPress standards
-
-### Common Issues
-
-**Q: Patterns aren't showing up in the editor**
-A: Make sure all pattern files are in the `/patterns/` directory and have the correct PHP header comments.
-
-**Q: Styles aren't applying correctly**
-A: Clear your browser cache and WordPress cache. Check that `theme.css` is being loaded in the page source.
-
-**Q: Mobile menu isn't working**
-A: The WordPress core handles mobile navigation. Make sure JavaScript is enabled and there are no console errors.
-
-**Q: Images in patterns show placeholder URLs**
-A: This is intentional. Replace placeholder image URLs with your own images via the block editor.
-
-## 📄 License
-
-This theme is licensed under the GNU General Public License v2 or later.
-
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
-
-You are free to:
-- Use the theme for any purpose
-- Modify the theme to your needs
-- Distribute the theme
-- Distribute modified versions
-
-## 👏 Credits
-
-- Design inspired by modern corporate websites
-- Built with WordPress block theme standards
-- Uses WordPress core blocks for maximum compatibility
-- Placeholder images from placehold.co
-
-## 🚀 What's Next?
+## What's Next?
 
 After setting up your theme:
 
@@ -359,6 +265,7 @@ After setting up your theme:
 
 ---
 
-**Made with ❤️ for public safety organizations**
+## TODO
 
-*Version 1.0.0 - 2026*
+- [ ] **Accessibility** - WCAG 2.1 Level AA compliant
+- [ ] **Performance Optimization** - Lightweight and fast-loading

@@ -42,10 +42,10 @@
     "wp:shell": "wp-env run cli bash"
   },
   "devDependencies": {
-    "@playwright/test": "^1.40.0",
-    "@seilerinstrument/wp-build-tools": "^1.9.0",
+    "@playwright/test": "^1.59.1",
+    "@seilerinstrument/wp-build-tools": "^1.17.0",
     "@wordpress/env": "file:../gutenberg/packages/env",
-    "@wordpress/scripts": "^27.0.0"
+    "@wordpress/scripts": "^27.9.0"
   },
   "keywords": [
     "wordpress",
