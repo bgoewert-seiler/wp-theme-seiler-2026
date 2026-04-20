@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@seilerinstrument/wp-build-tools": "^1.22.3",
+    "@seilerinstrument/wp-build-tools": "^1.23.0",
     "@wordpress/scripts": "^27.9.0"
   },
   "keywords": [
