@@ -1,0 +1,7 @@
+services:
+  web:
+    volumes:
+      - "wp-core:/var/www/html"
+      - "../src:/var/www/html/wp-content/themes/seiler-2026-theme:cached"
+volumes:
+  wp-core:

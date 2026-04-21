@@ -1,67 +1,70 @@
 {
-  "name": "seiler-2026-theme",
-  "version": "0.3.0",
-  "description": "WordPress block theme for public safety organizations",
-  "author": "Your Name",
-  "license": "GPL-2.0-or-later",
-  "scripts": {
-    "build": "wp-scripts build",
-    "build:blocks": "wp-scripts build",
-    "build:zip": "bun run build:blocks && seiler-build-zip --skip-validate",
-    "build:zip:manual": "bun run build:blocks && bash -c 'rm -f ../wp-theme-seiler-2026.zip && zip -r ../wp-theme-seiler-2026.zip . -x \"node_modules/*\" \"*.local/*\" \"tests/*\" \"playwright-report/*\" \"test-results/*\" \"*.git/*\" \"*.log\" \".playwright-mcp/*\" \"*.md\"'",
-    "start": "wp-scripts start",
-    "env:start": "wp-env start",
-    "env:stop": "wp-env stop",
-    "env:update": "wp-env start --update",
-    "env:restart": "wp-env start --update",
-    "env:destroy": "echo \"y\" | wp-env destroy",
-    "env:clean": "wp-env clean all",
-    "env:reset": "npm run env:destroy && npm run env:start",
-    "env:cache:clear": "wp-env run cli wp cache flush && wp-env run cli wp rewrite flush && echo 'Cache cleared.'",
-    "env:log": "less +F $(wp-env install-path 2> /dev/null)/WordPress/wp-content/debug.log",
-    "env:log:tail": "tail -100 $(wp-env install-path 2> /dev/null)/WordPress/wp-content/debug.log",
-    "env:log:clear": "truncate -s 0 $(wp-env install-path 2> /dev/null)/WordPress/wp-content/debug.log && echo 'Log cleared.'",
-    "env:path": "wp-env install-path",
-    "env:url": "bash -c 'wpHome=$(jq -r \".config.WP_HOME // empty\" .wp-env.json); if [ -n \"$wpHome\" ]; then echo \"Development: $wpHome\"; else https=$(jq -r \".https // false\" .wp-env.json); hostname=$(jq -r \".hostname // \\\"localhost\\\"\" .wp-env.json); if [ \"$https\" = \"true\" ]; then protocol=\"https\"; mainPort=$(jq -r \".httpsPort // 8443\" .wp-env.json); testPort=$(jq -r \".testsHttpsPort // 8444\" .wp-env.json); else protocol=\"http\"; mainPort=$(jq -r \".port // 8888\" .wp-env.json); testPort=$(jq -r \".testsPort // 8889\" .wp-env.json); fi; echo \"Development: $protocol://$hostname:$mainPort\"; echo \"Test: $protocol://$hostname:$testPort\"; fi'",
-    "theme:check": "wp-env run cli wp theme check wp-theme-seiler-2026",
-    "theme:activate": "wp-env run cli wp theme activate wp-theme-seiler-2026",
-    "theme:info": "wp-env run cli wp theme get wp-theme-seiler-2026",
-    "setup:homepage": "npm run setup:create-homepage && npm run setup:set-homepage",
-    "setup:create-homepage": "wp-env run cli wp post create --post_type=page --post_status=publish --post_title='Home' --post_name=home",
-    "setup:set-homepage": "wp-env run cli wp option update show_on_front page && wp-env run cli wp option update page_on_front $(wp-env run cli wp post list --post_type=page --name=home --field=ID --format=ids)",
-    "browser:open": "bash -c 'if grep -qi microsoft /proc/version 2>/dev/null; then explorer.exe https://localhost:8443; elif [[ $OSTYPE == darwin* ]]; then open https://localhost:8443; else xdg-open https://localhost:8443; fi'",
-    "browser:chrome": "bash -c 'if grep -qi microsoft /proc/version 2>/dev/null; then cmd.exe /c start chrome https://localhost:8443; elif [[ \"$OSTYPE\" == \"darwin\"* ]]; then open -a \"Google Chrome\" https://localhost:8443; else google-chrome https://localhost:8443; fi'",
-    "browser:firefox": "bash -c 'if grep -qi microsoft /proc/version 2>/dev/null; then cmd.exe /c start firefox https://localhost:8443; elif [[ \"$OSTYPE\" == \"darwin\"* ]]; then open -a Firefox https://localhost:8443; else firefox https://localhost:8443; fi'",
-    "test": "playwright test",
-    "test:e2e": "playwright test",
-    "test:e2e:headed": "playwright test --headed",
-    "test:e2e:ui": "playwright test --ui",
-    "test:header": "playwright test tests/header.spec.js",
-    "test:install": "playwright install chromium",
-    "wp:cli": "wp-env run cli wp",
-    "wp:shell": "wp-env run cli bash"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.59.1",
-    "@seilerinstrument/wp-build-tools": "^1.24.0",
-    "@wordpress/scripts": "^27.9.0"
-  },
-  "keywords": [
-    "wordpress",
-    "theme",
-    "block-theme",
-    "full-site-editing",
-    "seiler"
-  ],
-  "seiler": {
-    "wpBuildTools": {
-      "type": "theme",
-      "lockFileCheckNpm": "warn",
-      "lockFileCheckComposer": "off"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/seiler-2026.git"
-  }
+	"name": "seiler-2026-theme",
+	"version": "0.3.0",
+	"description": "WordPress block theme for public safety organizations",
+	"author": "Your Name",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build",
+		"build:blocks": "wp-scripts build",
+		"build:zip": "bun run build:blocks && seiler-build-zip --skip-validate",
+		"build:zip:manual": "bun run build:blocks && bash -c 'rm -f ../wp-theme-seiler-2026.zip && zip -r ../wp-theme-seiler-2026.zip . -x \"node_modules/*\" \"*.local/*\" \"tests/*\" \"playwright-report/*\" \"test-results/*\" \"*.git/*\" \"*.log\" \".playwright-mcp/*\" \"*.md\"'",
+		"start": "wp-scripts start",
+		"env:start": "ddev start",
+		"env:stop": "ddev stop",
+		"env:restart": "ddev restart",
+		"env:destroy": "ddev delete --omit-snapshot",
+		"env:reset": "npm run env:destroy && npm run env:start",
+		"env:cache:clear": "ddev wp cache flush && ddev wp rewrite flush && echo 'Cache cleared.'",
+		"env:log": "ddev logs -f",
+		"env:log:tail": "ddev logs --tail=100",
+		"env:url": "ddev describe --json-output | jq -r '.raw.primary_url // empty' || echo https://seiler-2026-theme.ddev.site",
+		"theme:check": "ddev wp theme check seiler-2026-theme",
+		"theme:activate": "ddev wp theme activate seiler-2026-theme",
+		"theme:info": "ddev wp theme get seiler-2026-theme",
+		"setup:homepage": "npm run setup:create-homepage && npm run setup:set-homepage",
+		"setup:create-homepage": "ddev wp post create --post_type=page --post_status=publish --post_title='Home' --post_name=home",
+		"setup:set-homepage": "ddev wp option update show_on_front page && ddev wp option update page_on_front $(ddev wp post list --post_type=page --name=home --field=ID --format=ids)",
+		"browser:open": "bash -c 'if grep -qi microsoft /proc/version 2>/dev/null; then explorer.exe https://seiler-2026-theme.ddev.site; elif [[ $OSTYPE == darwin* ]]; then open https://seiler-2026-theme.ddev.site; else xdg-open https://seiler-2026-theme.ddev.site; fi'",
+		"browser:chrome": "bash -c 'if grep -qi microsoft /proc/version 2>/dev/null; then cmd.exe /c start chrome https://seiler-2026-theme.ddev.site; elif [[ \"$OSTYPE\" == \"darwin\"* ]]; then open -a \"Google Chrome\" https://seiler-2026-theme.ddev.site; else google-chrome https://seiler-2026-theme.ddev.site; fi'",
+		"browser:firefox": "bash -c 'if grep -qi microsoft /proc/version 2>/dev/null; then cmd.exe /c start firefox https://seiler-2026-theme.ddev.site; elif [[ \"$OSTYPE\" == \"darwin\"* ]]; then open -a Firefox https://seiler-2026-theme.ddev.site; else firefox https://seiler-2026-theme.ddev.site; fi'",
+		"test": "playwright test",
+		"test:e2e": "playwright test",
+		"test:e2e:headed": "playwright test --headed",
+		"test:e2e:ui": "playwright test --ui",
+		"test:header": "playwright test tests/header.spec.js",
+		"test:install": "playwright install",
+		"wp:cli": "ddev wp",
+		"wp:shell": "ddev ssh",
+		"test:integration": "seiler-phpunit-ddev --integration",
+		"test:unit": "seiler-phpunit --unit"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.59.1",
+		"@seilerinstrument/wp-build-tools": "^1.29.5",
+		"@wordpress/scripts": "^27.9.0"
+	},
+	"keywords": [
+		"wordpress",
+		"theme",
+		"block-theme",
+		"full-site-editing",
+		"seiler"
+	],
+	"seiler": {
+		"wpBuildTools": {
+			"type": "theme",
+			"lockFileCheckNpm": "warn",
+			"lockFileCheckComposer": "off",
+			"ddevPlugins": [
+				"splide-carousel",
+				"contact-form-7",
+				"woocommerce"
+			]
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yourusername/seiler-2026.git"
+	}
 }

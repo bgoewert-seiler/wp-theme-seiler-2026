@@ -1,0 +1,87 @@
+#!/bin/bash
+## Description: Install WP + activate this project's plugin/theme + install configured plugins
+## Usage: wp-bootstrap
+set -e
+
+ADMIN_USER="${SEILER_WP_ADMIN_USER:-admin}"
+ADMIN_PASS="${SEILER_WP_ADMIN_PASS:-admin}"
+ADMIN_EMAIL="${SEILER_WP_ADMIN_EMAIL:-admin@example.com}"
+SITE_URL="${DDEV_PRIMARY_URL:-https://${DDEV_HOSTNAME}}"
+SITE_TITLE="${DDEV_PROJECT:-WordPress Dev}"
+DEFAULT_THEME="${SEILER_WP_DEFAULT_THEME:-twentytwentyfive}"
+
+PROJECT_TYPE="theme"
+PROJECT_SLUG="seiler-2026-theme"
+
+cd /var/www/html
+
+# Ensure wp-content + standard subdirs exist and are writable.
+# Docker creates bind-mount parent paths as root:root 0755. Chown alone is not
+# enough because wp-cli in the ddev web container runs as a host-UID user that
+# does not always match www-data, so we chmod the parent dirs world-writable
+# (non-recursive, so the bind-mounted ./src is untouched).
+sudo mkdir -p wp-content wp-content/plugins wp-content/themes wp-content/uploads wp-content/upgrade wp-content/languages
+sudo chmod 0777 wp-content wp-content/plugins wp-content/themes wp-content/uploads wp-content/upgrade wp-content/languages
+
+if [ ! -f wp-load.php ]; then
+  echo "→ WP core files missing. Running wp core download..."
+  wp core download
+fi
+
+if [ ! -f wp-config.php ]; then
+  echo "→ wp-config.php missing. Running wp config create..."
+  wp config create --dbname=db --dbuser=db --dbpass=db --dbhost=db --skip-check
+fi
+
+if ! wp core is-installed --quiet 2>/dev/null; then
+  echo "→ WP not bootstrapped. Running wp core install..."
+  wp core install \
+    --url="$SITE_URL" \
+    --title="$SITE_TITLE" \
+    --admin_user="$ADMIN_USER" \
+    --admin_password="$ADMIN_PASS" \
+    --admin_email="$ADMIN_EMAIL" \
+    --skip-email
+else
+  echo "→ WP already bootstrapped."
+fi
+
+if [ -n "$PROJECT_SLUG" ] && [ "$PROJECT_TYPE" = "plugin" ]; then
+  wp plugin is-active "$PROJECT_SLUG" --quiet 2>/dev/null || wp plugin activate "$PROJECT_SLUG"
+elif [ -n "$PROJECT_SLUG" ] && [ "$PROJECT_TYPE" = "theme" ]; then
+  CURRENT="$(wp theme list --status=active --field=name 2>/dev/null || true)"
+  [ "$CURRENT" = "$PROJECT_SLUG" ] || wp theme activate "$PROJECT_SLUG"
+fi
+
+# Ensure some theme is active. Runs on plugin projects AND when detection failed
+# at scaffold time (PROJECT_TYPE=""); skipped when this IS a theme project, because
+# the theme branch above already activated the project theme.
+if [ "$PROJECT_TYPE" != "theme" ]; then
+  if ! wp theme list --status=active --field=name 2>/dev/null | grep -q .; then
+    echo "→ No theme active. Installing + activating $DEFAULT_THEME..."
+    wp theme is-installed "$DEFAULT_THEME" --quiet 2>/dev/null || wp theme install "$DEFAULT_THEME"
+    wp theme activate "$DEFAULT_THEME"
+  fi
+fi
+
+
+if wp plugin is-installed 'splide-carousel' --quiet 2>/dev/null; then
+  wp plugin is-active 'splide-carousel' --quiet 2>/dev/null || wp plugin activate 'splide-carousel'
+else
+  echo "→ Installing plugin: splide-carousel"
+  wp plugin install 'splide-carousel' --activate
+fi
+
+if wp plugin is-installed 'contact-form-7' --quiet 2>/dev/null; then
+  wp plugin is-active 'contact-form-7' --quiet 2>/dev/null || wp plugin activate 'contact-form-7'
+else
+  echo "→ Installing plugin: contact-form-7"
+  wp plugin install 'contact-form-7' --activate
+fi
+
+if wp plugin is-installed 'woocommerce' --quiet 2>/dev/null; then
+  wp plugin is-active 'woocommerce' --quiet 2>/dev/null || wp plugin activate 'woocommerce'
+else
+  echo "→ Installing plugin: woocommerce"
+  wp plugin install 'woocommerce' --activate
+fi

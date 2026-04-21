@@ -1,0 +1,14 @@
+name: seiler-2026-theme
+type: wordpress
+docroot: ""
+php_version: "8.3"
+webserver_type: nginx-fpm
+mutagen_enabled: true
+disable_settings_management: true
+database:
+  type: mariadb
+  version: "10.11"
+hooks:
+  post-start:
+    - exec: bash /mnt/ddev_config/commands/web/wp-bootstrap
+    - exec: wp rewrite structure '/%postname%/' --hard
