@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @generated seiler-phpunit-setup -->
+<phpunit
+	bootstrap="tests/bootstrap-unit.php"
+	backupGlobals="false"
+	colors="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	beStrictAboutOutputDuringTests="true"
+	verbose="true"
+>
+	<testsuites>
+		<testsuite name="seiler-2026-theme (unit)">
+			<!-- WP convention: test-*.php -->
+			<directory prefix="test-" suffix=".php">tests/</directory>
+			<!-- PHPUnit default: *Test.php -->
+			<directory suffix="Test.php">tests/</directory>
+		</testsuite>
+	</testsuites>
+	<coverage processUncoveredFiles="true">
+		<include>
+			<directory suffix=".php">src</directory>
+		</include>
+		<exclude>
+			<directory>src/vendor</directory>
+			<directory>src/vendor-dev</directory>
+		</exclude>
+	</coverage>
+</phpunit>
