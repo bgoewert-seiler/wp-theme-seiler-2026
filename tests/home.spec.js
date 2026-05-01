@@ -5,16 +5,13 @@
  */
 
 const { test, expect } = require('@playwright/test');
+const { getStyle, VIEWPORTS } = require('../vendor/seilerinstrument/wp-test-utils/playwright');
 
 // Expected values
 const EXPECTED = {
 	featuresHeading: 'PRECISION SOLUTIONS SINCE 1945',
 	featureBoxCount: 3,
 	slideMinCount: 2,
-	viewports: {
-		desktop: { width: 1280, height: 720 },
-		mobile: { width: 375, height: 800 },
-	},
 	mobile: {
 		heroCoverPaddingLeft: 16,    // 1rem at 16px root
 		ctaCoverPaddingLeft: 20,     // 1.25rem at 16px root
@@ -25,7 +22,7 @@ const EXPECTED = {
 
 test.describe('Homepage Desktop', () => {
 	test.beforeEach(async ({ page }) => {
-		await page.setViewportSize(EXPECTED.viewports.desktop);
+		await page.setViewportSize(VIEWPORTS.desktop);
 		await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
 	});
 
@@ -70,16 +67,14 @@ test.describe('Homepage Desktop', () => {
 
 test.describe('Homepage Mobile', () => {
 	test.beforeEach(async ({ page }) => {
-		await page.setViewportSize(EXPECTED.viewports.mobile);
+		await page.setViewportSize(VIEWPORTS.mobile);
 		await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
 	});
 
 	test('hero cover padding shrinks on mobile', async ({ page }) => {
 		const cover = page.locator('.hero-carousel .wp-block-cover').first();
 
-		const paddingLeft = await cover.evaluate(el =>
-			window.getComputedStyle(el).paddingLeft
-		);
+		const paddingLeft = await getStyle(cover, 'paddingLeft');
 		// At mobile, no custom padding is set — should resolve to browser/theme default (~16px), NOT 7em
 		const px = parseInt(paddingLeft);
 		expect(px).toBeLessThanOrEqual(EXPECTED.mobile.heroCoverPaddingLeft + 4);
@@ -89,12 +84,8 @@ test.describe('Homepage Mobile', () => {
 		// @media (max-width: 450px) overrides to var(--wp--preset--spacing--medium) !important
 		const features = page.locator('.features-three-col');
 
-		const paddingTop = await features.evaluate(el =>
-			window.getComputedStyle(el).paddingTop
-		);
-		const paddingBottom = await features.evaluate(el =>
-			window.getComputedStyle(el).paddingBottom
-		);
+		const paddingTop = await getStyle(features, 'paddingTop');
+		const paddingBottom = await getStyle(features, 'paddingBottom');
 
 		expect(parseInt(paddingTop)).toBeLessThan(EXPECTED.mobile.featuresMaxPadding);
 		expect(parseInt(paddingBottom)).toBeLessThan(EXPECTED.mobile.featuresMaxPadding);
@@ -106,9 +97,7 @@ test.describe('Homepage Mobile', () => {
 		// NOTE: if the theme adds a mobile override, this will reflect the reduced value.
 		const cover = page.locator('.cta-banner-section .wp-block-cover');
 
-		const paddingLeft = await cover.evaluate(el =>
-			window.getComputedStyle(el).paddingLeft
-		);
+		const paddingLeft = await getStyle(cover, 'paddingLeft');
 		// Allow up to 64px (4rem) since inline styles aren't overridden in base theme CSS
 		expect(parseInt(paddingLeft)).toBeLessThanOrEqual(64);
 	});

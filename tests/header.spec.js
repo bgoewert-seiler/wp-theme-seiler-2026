@@ -5,6 +5,7 @@
  */
 
 const { test, expect } = require('@playwright/test');
+const { getStyle } = require('../vendor/seilerinstrument/wp-test-utils/playwright');
 
 // Expected values
 const EXPECTED = {
@@ -35,27 +36,19 @@ test.describe('Header Styling', () => {
 		const firstLink = page.locator('.header-utility-nav a').first();
 
 		// Check font size
-		const fontSize = await firstLink.evaluate(el =>
-			window.getComputedStyle(el).fontSize
-		);
+		const fontSize = await getStyle(firstLink, 'fontSize');
 		expect(fontSize).toBe(EXPECTED.utilityNav.fontSize);
 
 		// Check font weight
-		const fontWeight = await firstLink.evaluate(el =>
-			window.getComputedStyle(el).fontWeight
-		);
+		const fontWeight = await getStyle(firstLink, 'fontWeight');
 		expect(fontWeight).toBe(EXPECTED.utilityNav.fontWeight);
 
 		// Check color
-		const color = await firstLink.evaluate(el =>
-			window.getComputedStyle(el).color
-		);
+		const color = await getStyle(firstLink, 'color');
 		expect(color).toBe(EXPECTED.utilityNav.color);
 
 		// Check text decoration (should be none)
-		const textDecoration = await firstLink.evaluate(el =>
-			window.getComputedStyle(el).textDecoration
-		);
+		const textDecoration = await getStyle(firstLink, 'textDecoration');
 		expect(textDecoration).toContain('none');
 	});
 
@@ -69,9 +62,7 @@ test.describe('Header Styling', () => {
 		await expect(icon).toBeVisible();
 
 		// Check font weight
-		const fontWeight = await cart.evaluate(el =>
-			window.getComputedStyle(el).fontWeight
-		);
+		const fontWeight = await getStyle(cart, 'fontWeight');
 		expect(fontWeight).toBe(EXPECTED.cart.fontWeight);
 	});
 
@@ -86,9 +77,7 @@ test.describe('Header Styling', () => {
 		await expect(icon).toBeVisible();
 
 		// Check icon size
-		const iconSize = await icon.evaluate(el =>
-			window.getComputedStyle(el).fontSize
-		);
+		const iconSize = await getStyle(icon, 'fontSize');
 		expect(parseInt(iconSize)).toBeGreaterThanOrEqual(EXPECTED.search.iconSize);
 	});
 
