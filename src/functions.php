@@ -326,11 +326,6 @@ function seiler_2026_register_block_styles() {
 		] );
 	}
 
-	// Spin + scale on hover — suited for icons and small images.
-	register_block_style( 'core/image', [
-		'name'  => 'hover-spin-scale',
-		'label' => 'Hover Spin & Scale',
-	] );
 }
 add_action( 'init', 'seiler_2026_register_block_styles' );
 

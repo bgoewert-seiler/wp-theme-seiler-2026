@@ -1420,13 +1420,6 @@ input[type="submit"]:disabled,
 	border-radius: 50%;
 }
 
-.is-style-hover-spin-scale {
-	transition: transform var(--transition-medium);
-}
-
-.is-style-hover-spin-scale:hover {
-	transform: rotate(5deg) scale(1.1);
-}
 
 /* ===================================
    Industries Grid
