@@ -1414,11 +1414,6 @@ input[type="submit"]:disabled,
 
 .features-three-col .feature-box {
 	text-align: center;
-	transition: transform var(--transition-medium);
-}
-
-.features-three-col .feature-box:hover {
-	transform: translateY(-5px);
 }
 
 .feature-icon img {
@@ -1439,12 +1434,6 @@ input[type="submit"]:disabled,
 	overflow: hidden;
 	border-radius: 8px;
 	cursor: pointer;
-	transition: all var(--transition-medium);
-}
-
-.industries-grid-section .industry-card:hover {
-	transform: translateY(-5px);
-	box-shadow: var(--shadow-card-hover);
 }
 
 .industries-grid-section .industry-card .wp-block-cover__background {
@@ -1498,13 +1487,7 @@ input[type="submit"]:disabled,
    =================================== */
 
 .testimonials-section .testimonial-card {
-	transition: all var(--transition-medium);
 	height: 100%;
-}
-
-.testimonials-section .testimonial-card:hover {
-	transform: translateY(-5px);
-	box-shadow: var(--shadow-card-hover);
 }
 
 .testimonials-section .wp-block-separator {

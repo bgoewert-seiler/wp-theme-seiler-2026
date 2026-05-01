@@ -15,8 +15,8 @@
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|large","left":"var:preset|spacing|large"}}}} -->
 	<div class="wp-block-columns alignwide">
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"feature-box"} -->
-		<div class="wp-block-column feature-box" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"feature-box is-style-hover-lift"} -->
+		<div class="wp-block-column feature-box is-style-hover-lift" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
 			<!-- wp:image {"align":"center","width":"80px","height":"80px","sizeSlug":"large","className":"feature-icon"} -->
 			<figure class="wp-block-image aligncenter size-large is-resized feature-icon"><img src="https://placehold.co/80x80/FFB800/FFFFFF?text=✓" alt="Trusted Partner Icon" style="width:80px;height:80px"/></figure>
 			<!-- /wp:image -->
@@ -31,8 +31,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"feature-box"} -->
-		<div class="wp-block-column feature-box" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"feature-box is-style-hover-lift"} -->
+		<div class="wp-block-column feature-box is-style-hover-lift" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
 			<!-- wp:image {"align":"center","width":"80px","height":"80px","sizeSlug":"large","className":"feature-icon"} -->
 			<figure class="wp-block-image aligncenter size-large is-resized feature-icon"><img src="https://placehold.co/80x80/FFB800/FFFFFF?text=★" alt="Complete Support Icon" style="width:80px;height:80px"/></figure>
 			<!-- /wp:image -->
@@ -47,8 +47,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"feature-box"} -->
-		<div class="wp-block-column feature-box" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"feature-box is-style-hover-lift"} -->
+		<div class="wp-block-column feature-box is-style-hover-lift" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
 			<!-- wp:image {"align":"center","width":"80px","height":"80px","sizeSlug":"large","className":"feature-icon"} -->
 			<figure class="wp-block-image aligncenter size-large is-resized feature-icon"><img src="https://placehold.co/80x80/FFB800/FFFFFF?text=♥" alt="Customer Focused Icon" style="width:80px;height:80px"/></figure>
 			<!-- /wp:image -->

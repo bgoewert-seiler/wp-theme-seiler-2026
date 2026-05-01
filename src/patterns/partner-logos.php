@@ -17,32 +17,32 @@
 	<div class="wp-block-columns alignwide">
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+1" alt="Partner Logo 1" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+1" alt="Partner Logo 1" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+2" alt="Partner Logo 2" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+2" alt="Partner Logo 2" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+3" alt="Partner Logo 3" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+3" alt="Partner Logo 3" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+4" alt="Partner Logo 4" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+4" alt="Partner Logo 4" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -53,32 +53,32 @@
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--medium)">
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+5" alt="Partner Logo 5" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+5" alt="Partner Logo 5" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+6" alt="Partner Logo 6" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+6" alt="Partner Logo 6" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+7" alt="Partner Logo 7" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+7" alt="Partner Logo 7" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo"} -->
-			<figure class="wp-block-image aligncenter size-large is-resized partner-logo"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+8" alt="Partner Logo 8" style="width:180px"/></figure>
+			<!-- wp:image {"align":"center","width":"180px","sizeSlug":"large","className":"partner-logo is-style-hover-scale"} -->
+			<figure class="wp-block-image aligncenter size-large is-resized partner-logo is-style-hover-scale"><img src="https://placehold.co/300x150/CCCCCC/666666?text=Partner+8" alt="Partner Logo 8" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

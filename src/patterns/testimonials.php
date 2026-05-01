@@ -15,8 +15,8 @@
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|large","left":"var:preset|spacing|large"}}}} -->
 	<div class="wp-block-columns alignwide">
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"width":"1px","color":"var(--wp--preset--color--light-gray)","radius":"8px"}},"backgroundColor":"light-gray","className":"testimonial-card"} -->
-		<div class="wp-block-column testimonial-card has-light-gray-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--light-gray);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"width":"1px","color":"var(--wp--preset--color--light-gray)","radius":"8px"}},"backgroundColor":"light-gray","className":"testimonial-card is-style-hover-lift"} -->
+		<div class="wp-block-column testimonial-card is-style-hover-lift has-light-gray-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--light-gray);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 			<!-- wp:paragraph {"style":{"typography":{"fontSize":"18px"}}} -->
 			<p style="font-size:18px;line-height:1.6">"The team provided exceptional support throughout our entire implementation. Their expertise and solutions are unmatched."</p>
 			<!-- /wp:paragraph -->
@@ -33,8 +33,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"width":"1px","color":"var(--wp--preset--color--light-gray)","radius":"8px"}},"backgroundColor":"light-gray","className":"testimonial-card"} -->
-		<div class="wp-block-column testimonial-card has-light-gray-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--light-gray);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"width":"1px","color":"var(--wp--preset--color--light-gray)","radius":"8px"}},"backgroundColor":"light-gray","className":"testimonial-card is-style-hover-lift"} -->
+		<div class="wp-block-column testimonial-card is-style-hover-lift has-light-gray-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--light-gray);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 			<!-- wp:paragraph {"style":{"typography":{"fontSize":"18px"}}} -->
 			<p style="font-size:18px;line-height:1.6">"We've been partners for over 15 years. Their reliability and cutting-edge technology keep our operations running smoothly."</p>
 			<!-- /wp:paragraph -->
@@ -51,8 +51,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"width":"1px","color":"var(--wp--preset--color--light-gray)","radius":"8px"}},"backgroundColor":"light-gray","className":"testimonial-card"} -->
-		<div class="wp-block-column testimonial-card has-light-gray-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--light-gray);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"width":"1px","color":"var(--wp--preset--color--light-gray)","radius":"8px"}},"backgroundColor":"light-gray","className":"testimonial-card is-style-hover-lift"} -->
+		<div class="wp-block-column testimonial-card is-style-hover-lift has-light-gray-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--light-gray);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 			<!-- wp:paragraph {"style":{"typography":{"fontSize":"18px"}}} -->
 			<p style="font-size:18px;line-height:1.6">"Outstanding training and customer service. They truly understand the unique challenges of our industry."</p>
 			<!-- /wp:paragraph -->
