@@ -112,7 +112,7 @@ function seiler_2026_create_default_navigations() {
 
 		<!-- wp:navigation-link {"label":"Events","url":"#","kind":"custom","isTopLevelLink":true} /-->
 
-		<!-- wp:navigation-link {"label":"About","url":"#","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"About","url":"' . esc_url( home_url( '/about/' ) ) . '","kind":"custom","isTopLevelLink":true} /-->
 
 		<!-- wp:navigation-link {"label":"Contact","url":"#","kind":"custom","isTopLevelLink":true} /-->
 
