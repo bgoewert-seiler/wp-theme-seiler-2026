@@ -46,7 +46,7 @@
 	<h3 class="wp-block-heading" style="font-size:1.25rem;font-weight:700;margin-top:var(--wp--preset--spacing--medium);margin-bottom:var(--wp--preset--spacing--x-small)">We Stand Behind Our Products</h3>
 	<!-- /wp:heading -->
 	<!-- wp:paragraph -->
-	<p>Seiler Instrument and Manufacturing Company (&#8220;Seiler&#8221;) has always had a &#8220;complete satisfaction&#8221; purchase policy and we will try to work with you to resolve any merchandise issues that you may have. We invite you to view our terms and conditions page for details.</p>
+	<p>Seiler Instrument and Manufacturing Company (&#8220;Seiler&#8221;) has always had a &#8220;complete satisfaction&#8221; purchase policy and we will try to work with you to resolve any merchandise issues that you may have. We invite you to view our <a href="/terms-and-conditions">terms and conditions</a> page for details.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.25rem","fontWeight":"700"},"spacing":{"margin":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|x-small"}}}} -->
