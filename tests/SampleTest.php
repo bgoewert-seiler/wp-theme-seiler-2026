@@ -1,11 +1,10 @@
 <?php
-/**
- * Sample test — delete or replace once real tests exist.
- */
 
-use PHPUnit\Framework\TestCase;
+declare(strict_types=1);
 
-final class SampleTest extends TestCase {
+// @generated seiler-phpunit-setup
+
+final class SampleTest extends \Seiler\Test\UnitTestCase {
 	public function test_sanity(): void {
 		$this->assertTrue( true );
 	}

@@ -18,6 +18,15 @@
         "php": ">=8.3",
         "composer/installers": "^1.0 || ^2.0"
     },
+    "require-dev": {
+        "seilerinstrument/wp-test-utils": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/SeilerInstrument/wp-test-utils"
+        }
+    ],
     "archive": {
         "exclude": [
             "/.github",
@@ -37,5 +46,10 @@
             "/AGENTS.md",
             "/CLAUDE.md"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }
