@@ -1418,10 +1418,13 @@ input[type="submit"]:disabled,
 
 .feature-icon img {
 	border-radius: 50%;
+}
+
+.is-style-hover-spin-scale {
 	transition: transform var(--transition-medium);
 }
 
-.feature-box:hover .feature-icon img {
+.is-style-hover-spin-scale:hover {
 	transform: rotate(5deg) scale(1.1);
 }
 
