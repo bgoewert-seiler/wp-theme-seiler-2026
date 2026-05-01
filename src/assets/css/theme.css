@@ -1907,6 +1907,23 @@ select:focus {
 	animation: slideInLeft 0.6s ease-out;
 }
 
+.is-style-hover-lift {
+	transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.is-style-hover-lift:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-card-hover);
+}
+
+.is-style-hover-scale {
+	transition: transform var(--transition-medium);
+}
+
+.is-style-hover-scale:hover {
+	transform: scale(1.05);
+}
+
 /* ===================================
    Form Styles (consistent with Seiler Geo)
    =================================== */

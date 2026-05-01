@@ -299,9 +299,8 @@ function seiler_2026_register_block_styles() {
 		'label' => 'Alternate',
 	] );
 
-	// Animation styles — appear in the block Style picker in the editor.
-	// Apply to blocks where entrance animations are commonly useful.
-	$animation_blocks = [ 'core/group', 'core/cover', 'core/image', 'core/heading', 'core/paragraph', 'core/columns' ];
+	// Entrance animation styles (keyframe) — appear in the block Style picker.
+	$animation_blocks = [ 'core/group', 'core/cover', 'core/image', 'core/heading', 'core/paragraph', 'core/columns', 'core/column' ];
 	foreach ( $animation_blocks as $block ) {
 		register_block_style( $block, [
 			'name'  => 'fade-in',
@@ -310,6 +309,20 @@ function seiler_2026_register_block_styles() {
 		register_block_style( $block, [
 			'name'  => 'slide-in-left',
 			'label' => 'Slide In Left',
+		] );
+	}
+
+	// Hover interaction styles — expose the hover lift/scale effects used on
+	// cards and images so editors can apply them to any compatible block.
+	$hover_blocks = [ 'core/group', 'core/image', 'core/cover', 'core/columns', 'core/column' ];
+	foreach ( $hover_blocks as $block ) {
+		register_block_style( $block, [
+			'name'  => 'hover-lift',
+			'label' => 'Hover Lift',
+		] );
+		register_block_style( $block, [
+			'name'  => 'hover-scale',
+			'label' => 'Hover Scale',
 		] );
 	}
 }
