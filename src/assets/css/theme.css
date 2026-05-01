@@ -1886,6 +1886,7 @@ select:focus {
 	}
 }
 
+.is-style-fade-in,
 .fade-in {
 	animation: fadeIn 0.6s ease-out;
 }
@@ -1901,6 +1902,7 @@ select:focus {
 	}
 }
 
+.is-style-slide-in-left,
 .slide-in-left {
 	animation: slideInLeft 0.6s ease-out;
 }

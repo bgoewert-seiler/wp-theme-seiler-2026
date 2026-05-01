@@ -298,6 +298,20 @@ function seiler_2026_register_block_styles() {
 		'name'  => 'alternate',
 		'label' => 'Alternate',
 	] );
+
+	// Animation styles — appear in the block Style picker in the editor.
+	// Apply to blocks where entrance animations are commonly useful.
+	$animation_blocks = [ 'core/group', 'core/cover', 'core/image', 'core/heading', 'core/paragraph', 'core/columns' ];
+	foreach ( $animation_blocks as $block ) {
+		register_block_style( $block, [
+			'name'  => 'fade-in',
+			'label' => 'Fade In',
+		] );
+		register_block_style( $block, [
+			'name'  => 'slide-in-left',
+			'label' => 'Slide In Left',
+		] );
+	}
 }
 add_action( 'init', 'seiler_2026_register_block_styles' );
 
